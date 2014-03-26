@@ -1,0 +1,27 @@
+# Vim-style history search: Alt+[j|k]
+"\ej": history-search-forward
+"\ek": history-search-backward
+"\M-j": history-search-forward
+"\M-k": history-search-backward
+
+# delete words with Alt-Backspace / Alt-Delete
+"\e[3;3~": kill-word
+"\M-[3;3~": kill-word
+
+
+# Ctrl+arrows
+"\e[1;5C": forward-word
+"\e[1;5D": backward-word
+
+# Alt+arrows
+"\e[1;3C": forward-word
+"\e[1;3D": backward-word
+
+# Replace first word of the command with vim
+"\ev": "\C-a\eDvim"
+# Replace first word of the command with less
+"\eL": "\C-a\eDless"
+# Replace first word of the command with ls
+"\eK": "\C-a\eDls"
+#
+
