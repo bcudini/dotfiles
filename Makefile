@@ -1,7 +1,7 @@
 DOTFILES := ~/dotfiles
 
 
-install: vim bash python screen input diff
+install: vim bash python screen input
 
 %:
 	[ -e ~/.$@rc ] || ln -P $(DOTFILES)/$@rc ~/.$@rc
