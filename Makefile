@@ -1,7 +1,7 @@
 DOTFILES := ~/dotfiles
 
 
-install: inputrc diff
+install: screenrc inputrc diff
 
 %:
 	[ -e ~/.$@rc ] || ln -P $(DOTFILES)/$@rc ~/.$@rc

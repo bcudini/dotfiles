@@ -1,0 +1,55 @@
+startup_message off
+vbell off
+encoding 'UTF-8'
+hardcopydir /tmp/
+deflogin off
+defscrollback 5000
+altscreen on
+sorendition =s gK
+
+
+# Caption / hardstatus (historique dans .screen/status)
+caption always "%?%F%{.bW}%:%{.Kg}%?%?[%f]%? %? [%h]%?%=%?%-w%?%{..R}<%n %50>%t>%{-}%?%+w%?%= %<"
+hardstatus alwayslastline "%{.d.}%{+b .G}[%c]%{-} @%H %50` %? %{+b .m}%41`%{-}%?%? %{+b .R}%44`%{-}%? %45` %46` %{..g}%43`%{-} %=%54` %60` %{..G}[%55`]%{-}"
+
+
+# Bindings
+backtick 50 60 0    sh -c "uptime | sed 's/.*up /up /' | sed 's/, *[0-9]* user.*//'"
+backtick 55 53 53   sh -c "cat /proc/loadavg | cut -d' ' -f1-3"
+
+bind o only #layout select small
+
+bindkey -k k2 source /root/.screenrc
+bindkey \033$ resize +1
+bindkey \033* resize -1
+bindkey -k k3 resize +1
+bindkey -k k4 resize -1
+
+bindkey "\033O2A" focus up
+bindkey "\033O2B" focus down
+bindkey "\033O2D" focus left
+bindkey "\033O2C" focus right
+
+bindkey "\033[1;2A" focus up
+bindkey "\033[1;2B" focus down
+bindkey "\033[1;2C" focus right
+bindkey "\033[1;2D" focus left
+bindkey "\033[1;6A" resize +1
+bindkey "\033[1;6B" resize -1
+bindkey "\033[1;6D" prev
+bindkey "\033[1;6C" next
+
+bindkey "Œ" select 0
+bindkey "³" select 0
+bindkey "\033O1;2P" select 1
+bindkey "\033O1;2Q" select 2
+bindkey "\033O1;2R" select 3
+bindkey "\033O1;2S" select 4
+bindkey "\033[15;2~" select 5
+bindkey "\033[17;2~" select 6
+bindkey "\033[18;2~" select 7
+bindkey "\033[19;2~" select 8
+bindkey "\033[20;2~" select 9
+bindkey "\033[23;2~" select 10
+bindkey "\033[24;2~" select 11
+
