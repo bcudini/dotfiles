@@ -1,7 +1,7 @@
 DOTFILES := ~/dotfiles
 
 
-install: vim screen input diff
+install: vim bash screen input diff
 
 %:
 	[ -e ~/.$@rc ] || ln -P $(DOTFILES)/$@rc ~/.$@rc
