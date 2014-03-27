@@ -1,0 +1,97 @@
+# who am I?
+set realname="CARMI Internet"
+set reverse_name
+set use_envelope_from=yes
+
+# imap config
+set spoolfile="imaps://imap.ac-grenoble.fr/"
+set imap_user=""
+set imap_pass=""
+
+set folder="imaps://imap.ac-grenoble.fr/"		# inbox
+set record="imaps://imap.ac-grenoble.fr/Sent"		# sent messages
+set postponed="imaps://imap.ac-grenoble.fr/Draft"	# draft messages
+
+set imap_authenticators="login"
+set imap_passive="no"
+
+
+
+# SMTP config
+set smtp_url="smtp://smtp.ac-grenoble.fr/"
+#set smtp_pass=""
+set connect_timeout="10"
+
+set signature="~/.mutt/signature"
+
+
+set sort_aux=last-date-received
+
+set imap_keepalive=30
+
+alternative_order text/plain
+
+#set assumed_charset="utf8:iso-8859-1"
+set edit_hdrs
+
+#source ~/.mutt/mailboxes
+
+set implicit_autoview
+
+set charset="utf8"
+set xterm_set_titles="yes"
+
+# Garde la session ouverte
+set imap_idle
+set imap_check_subscribed
+
+# Réouvre la boîte automatiquement en cas d'erreur
+unset imap_passive
+
+# Marque les mails lus sans appuyer sur $
+unset imap_peek
+
+# Vérifie les mails toutes les 10 secondes
+set mail_check=10
+
+# Garde un peu de cache pour pas perdre des heures
+set header_cache="~/.mutt/cache/headers"
+set message_cachedir="~/.mutt/cache/bodies"
+set certificate_file="~/.mutt/certificates"
+set ssl_ca_certificates_file="/etc/ssl/certs/ca-certificates.crt"
+
+# Beep sur les nouveaux messages
+set beep_new
+
+# Vérification auto
+set imap_check_subscribed="yes"
+set imap_list_subscribed="yes"
+
+source ~/.mutt/gpg.rc
+
+bind pager <up> previous-line
+bind pager <down> next-line
+bind pager k previous-line
+bind pager j next-line
+
+bind index G imap-fetch-mail
+bind index \Ca imap-fetch-mail
+
+
+color index brightblue default '~f @ac-grenoble.fr'
+color index brightblue default '~f @listes.ac-grenoble.fr'
+color index brightblue default '~p'
+color index green default '~p ~f @ac-grenoble.fr'
+color index red default '~f "mdadm monitoring"'
+color index red default '~F'
+color index blue default '~f assistance@ac-grenoble.fr'
+
+# T~f 'Cron Daemon' ~d '>7d'
+# T~f root ~t 'slismaster@ac-grenoble.fr' ~d '>7d'
+
+folder-hook cron '\
+	push T~f 'Cron Daemon' ~d '>7d' ;\
+	push T~f root ~t 'slismaster@ac-grenoble.fr' ~d '>7d' ;\
+
+set index_format="%4C %Z %{%b %d} %-15.15L (%?l?%4l&%4c?) %s"
+
