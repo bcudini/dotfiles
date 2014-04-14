@@ -1,0 +1,3 @@
+mailer	/usr/bin/mutt
+editor /usr/bin/vim
+confirm_qq 0
