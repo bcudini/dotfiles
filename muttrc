@@ -116,4 +116,9 @@ folder-hook cron '\
 	push T~f 'Cron Daemon' ~d '>7d' ;\
 	push T~f root ~t 'slismaster@ac-grenoble.fr' ~d '>7d' ;\
 
+########################################################################
+# contacts in a separated file
+########################################################################
+set alias_file="~/.mutt/contacts"
+source ~/.mutt/contacts
 
