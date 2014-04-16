@@ -15,7 +15,7 @@ dotRC =                                                                \
 		ln -s $(DOTFILES)/$(1)rc ~/.$(1)rc;                    \
 	fi;
 
-install: vim bash python screen input w3m
+install: vim bash python screen input w3m mutt
 
 %:
 	$(call dotFiles,$@)
