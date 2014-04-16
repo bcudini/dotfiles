@@ -1,12 +1,12 @@
 DOTFILES := ~/dotfiles
 
 dotDir = \
-	if [ ! -h ~/.$(1)/ ]; then                                              \
-		if [ -d ~/.$(1)/ ]; then                                        \
-			rsync -a --progress ~/.$(1)/ $(DOTFILES)/dot.$(1)/;     \
-			rm -r ~/.$(1)/;                                         \
-		fi;                                                             \
-		ln -s $(DOTFILES)/dot.$(1)/ ~/.$(1);                            \
+	if [ ! -h ~/.$(1)/ ]; then                                     \
+		if [ -d ~/.$(1)/ ]; then                               \
+			rsync -av ~/.$(1)/ $(DOTFILES)/dot.$(1)/;      \
+			rm -r ~/.$(1)/;                                \
+		fi;                                                    \
+		ln -s $(DOTFILES)/dot.$(1)/ ~/.$(1);                   \
 	fi;
 
 
