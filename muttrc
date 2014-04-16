@@ -53,6 +53,10 @@ set connect_timeout="10"
 # misc preferences
 ########################################################################
 
+# do not lose time saying "yes I want to reply, yes I want the mail, etc
+set fast_reply
+set include="yes"
+
 # sort by thread, and by date among them: old threads will be shown at the date
 # of the last message in them
 set sort=threads
@@ -108,6 +112,7 @@ color index green default '~p ~f @ac-grenoble.fr'
 color index red default '~f "mdadm monitoring"'
 color index red default '~F'
 color index blue default '~f assistance@ac-grenoble.fr'
+color index green default '~f gadd | ~f cooper | ~f hautson'
 
 # T~f 'Cron Daemon' ~d '>7d'
 # T~f root ~t 'slismaster@ac-grenoble.fr' ~d '>7d'
