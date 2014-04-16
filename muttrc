@@ -43,7 +43,7 @@ set mail_check=10
 ########################################################################
 # SMTP config
 ########################################################################
-set smtp_url="smtp://smtp.ac-grenoble.fr/"
+set smtp_url="smtps://smtp.ac-grenoble.fr/"
 #set smtp_pass=""
 set connect_timeout="10"
 
@@ -56,6 +56,7 @@ set connect_timeout="10"
 # do not lose time saying "yes I want to reply, yes I want the mail, etc
 set fast_reply
 set include="yes"
+
 
 # sort by thread, and by date among them: old threads will be shown at the date
 # of the last message in them
