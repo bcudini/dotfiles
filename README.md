@@ -14,8 +14,10 @@ proceeds like this:
   dotfiles directory ;
 * it then replaces it with a symlink in the dotfiles dir.
 
-Then, you get to `make diff`, which is just calling `git difftool`, and you're
-good to merge your local changes with the repo.
+It also keeps a backup of your original config file in the `backup/` directory,
+just in case, but this way you get to keep all config file like they were
+before. Then, you get to `make diff`, which is just calling `git difftool`, and
+you're good to merge your local changes with the repo.
 
 It's a pretty cool enhancement over most Makefiles found in *dotfiles* repos
 around, as they often don't take care of existing files. Of course for your own

@@ -4,7 +4,7 @@ dotDir = \
 	if [ ! -h ~/.$(1)/ ]; then                                     \
 		if [ -d ~/.$(1)/ ]; then                               \
 			rsync -av ~/.$(1)/ $(DOTFILES)/dot.$(1)/;      \
-			rm -r ~/.$(1)/;                                \
+			mv ~/.$(1)/ $(DOTFILES)/backup/;               \
 		fi;                                                    \
 		ln -s $(DOTFILES)/dot.$(1)/ ~/.$(1);                   \
 	fi;
