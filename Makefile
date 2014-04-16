@@ -1,5 +1,14 @@
 DOTFILES := ~/dotfiles
 
+dotDir = \
+	if [ ! -h ~/.$(1)/ ]; then                                              \
+		if [ -d ~/.$(1)/ ]; then                                        \
+			rsync -a --progress ~/.$(1)/ $(DOTFILES)/dot.$(1)/;     \
+			rm -r ~/.$(1)/;                                         \
+		fi;                                                             \
+		ln -s $(DOTFILES)/dot.$(1)/ ~/.$(1);                            \
+	fi;
+
 
 install: vim bash python screen input w3m
 
@@ -9,8 +18,7 @@ install: vim bash python screen input w3m
 	[ -e ~/.$@rc ] || ln -P $(DOTFILES)/$@rc ~/.$@rc
 
 w3m:
-	[ -d ~/.w3m/ ] && ( rsync -a --progress ~/.w3m/ $(DOTFILES)/dot.w3m/ && rm -r ~/.w3m ) || true
-	[ -L ~/.w3m/ ] || ln -s $(DOTFILES)/dot.w3m/ ~/.w3m
+	$(call dotDir,$@)
 
 diff:
 	git difftool
