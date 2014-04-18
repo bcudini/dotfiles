@@ -87,3 +87,6 @@ if ($TERM == "xterm-256color")
 endif
 
 
+runtime bundle/pathogen/autoload/pathogen.vim
+execute pathogen#infect()
+
