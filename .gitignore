@@ -1,3 +1,15 @@
-dot.w3m/history
+# generic files, to ignore everywhere
 *.swp
 *~
+
+# ignore everything in backup/ as we won't share them
+/backup/
+
+# files ignored for dot.dirs
+
+/dot.mutt/cache/
+/dot.mutt/certificates
+/dot.mutt/contacts
+/dot.mutt/signature
+
+/dot.w3m/history
