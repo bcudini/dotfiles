@@ -20,6 +20,9 @@ install: vim bash python screen input w3m mutt
 %:
 	$(call dotFiles,$@)
 
+vim:
+	$(call dotRC,$@)
+	$(call dotDir,$@)
 
 w3m:
 	$(call dotDir,$@)
