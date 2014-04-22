@@ -1,0 +1,13 @@
+# vim: ft=gitconfig
+
+[core]
+	editor = vim
+[color]
+	ui = true
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false
+[merge]
+	tool = vimdiff
+
