@@ -31,6 +31,10 @@ vim:
 w3m:
 	$(call dotDir,$@)
 
+git:
+	mv ~/.gitconfig $(DOTFILES)/gitconfig || echo "no previous git config"
+	[ -e ~/.$(1)rc ] || ln -s $(DOTFILES)/gitconfig ~/.gitconfig
+
 diff:
 	git difftool
 
