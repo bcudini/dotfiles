@@ -26,6 +26,7 @@ set imap_list_subscribed="yes"
 
 # academic server needs a short keepalive
 set imap_keepalive=30
+set timeout=10	# https://bbs.archlinux.org/viewtopic.php?id=116046
 
 # Garde la session ouverte
 set imap_idle
