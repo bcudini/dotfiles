@@ -2,8 +2,6 @@
 # who am I?
 ########################################################################
 set realname="CARMI Internet"
-set reverse_name
-set use_envelope_from=yes
 
 ########################################################################
 # credentials, in a separated file
@@ -65,6 +63,9 @@ set connect_timeout="10"
 set fast_reply
 set include="yes"
 
+# use the identity that received the mail for the reply
+set reverse_name
+set use_envelope_from=yes
 
 # sort by thread, and by date among them: old threads will be shown at the date
 # of the last message in them
