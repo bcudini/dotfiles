@@ -6,11 +6,11 @@ source ~/.mutt/credentials
 ########################################################################
 # IMAP config
 ########################################################################
-set spoolfile="imaps://imap.ac-grenoble.fr/"
 
-set folder="imaps://imap.ac-grenoble.fr/"		# inbox
-set record="imaps://imap.ac-grenoble.fr/Sent"		# sent messages
-set postponed="imaps://imap.ac-grenoble.fr/Draft"	# draft messages
+set folder="imaps://imap.ac-grenoble.fr/"	# where the maildir is
+set spoolfile="=INBOX"				# inbox
+set record="=Sent"				# sent messages
+set postponed="=Draft"				# draft messages
 
 set imap_authenticators="login"
 set imap_passive="no"
