@@ -1,17 +1,6 @@
 ########################################################################
-# who am I?
+# config for personnal settings, in a separated file
 ########################################################################
-set realname="CARMI Internet"
-
-########################################################################
-# credentials, in a separated file
-########################################################################
-
-#set imap_user=""
-#set imap_pass=""
-#set smtp_pass=""
-#set smtp_url="smtps://smtp.ac-grenoble.fr/"
-
 source ~/.mutt/credentials
 
 ########################################################################
