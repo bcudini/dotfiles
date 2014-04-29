@@ -126,3 +126,6 @@ folder-hook cron '\
 set alias_file="~/.mutt/contacts"
 source ~/.mutt/contacts
 
+# ask LDAP with ^T
+set query_command = ~/.mutt/ldap-query.pl
+
