@@ -1,0 +1,23 @@
+# open movies fullscreen by default
+fs=1
+stop-xscreensaver=1
+
+# for use with remote files (sshfs)
+cache=2048
+
+# I always use cheap hardware, so don't push it too much
+framedrop=1
+
+# use software mixer not enabled by default, but with a higher softvol-max
+# very useful for movies with low sound, to go higher than possible
+#softvol=1
+softvol-max=1000
+
+# put subtitles *under* the movie
+subalign=2
+subpos=96
+
+# when using no X (yeah, sometimes you crash it, and you just want to watch a movie)
+#vo=fbdev2
+
+# vim: ft=mplayerconf
